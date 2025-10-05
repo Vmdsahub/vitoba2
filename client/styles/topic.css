@@ -1,0 +1,1569 @@
+.topic-shell {
+  max-width: 790px;
+  margin: 24px auto;
+  padding: 0;
+}
+
+/* Classe específica para visualização de tópicos postados */
+.topic-shell.topic-view {
+  margin: 0 auto 24px auto;
+}
+
+/* DESABILITAR COMPLETAMENTE SELETORES DE LINGUAGEM EM MODO READONLY */
+.topic-view .code-language-selector,
+.topic-view .ql-editor .code-language-selector,
+.ql-container.ql-disabled .code-language-selector {
+  pointer-events: none !important;
+  cursor: default !important;
+  opacity: 0.7 !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748b !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.topic-view .code-language-selector:hover,
+.topic-view .ql-editor .code-language-selector:hover,
+.ql-container.ql-disabled .code-language-selector:hover {
+  background: transparent !important;
+  border: none !important;
+}
+
+.topic-view .code-language-selector:focus,
+.topic-view .ql-editor .code-language-selector:focus,
+.ql-container.ql-disabled .code-language-selector:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Desabilitar dropdown arrow */
+.topic-view .code-language-selector,
+.ql-container.ql-disabled .code-language-selector {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Estilo para código em modo readonly */
+.topic-view .code-block,
+.ql-container.ql-disabled .code-block {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.topic-view .code-block textarea,
+.ql-container.ql-disabled .code-block textarea {
+  background: transparent !important;
+  border: none !important;
+  resize: none !important;
+  outline: none !important;
+  cursor: default !important;
+}
+
+/* Ajustes para o modal - aumentar altura e largura do editor */
+.topic-shell .ql-container {
+  border: none;
+  min-height: 220px;
+}
+
+.topic-shell .ql-editor {
+  min-height: 220px;
+}
+
+/* === SOBRESCREVER ESTILOS PADRÃO DO QUILL === */
+/* Remover fundos brancos de todos os elementos da toolbar EXCETO seletores de cor */
+.ql-toolbar .ql-picker-item:not(.ql-color-picker):not(.ql-background-picker),
+.ql-toolbar .ql-stroke,
+.ql-toolbar .ql-fill {
+  background: transparent !important;
+}
+
+/* Manter janela dropdown dos seletores de cor e tamanho visível */
+.ql-toolbar .ql-color-picker .ql-picker-options,
+.ql-toolbar .ql-background-picker .ql-picker-options,
+.ql-toolbar .ql-size .ql-picker-options {
+  background: white !important;
+  border: 1px solid #ccc !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+}
+
+/* Outros picker-options podem ser transparentes */
+.ql-toolbar .ql-picker-options:not(.ql-color-picker .ql-picker-options):not(.ql-background-picker .ql-picker-options):not(.ql-size .ql-picker-options) {
+  background: transparent !important;
+}
+
+/* Permitir que seletores de cor mantenham suas cores de fundo */
+.ql-toolbar .ql-color-picker .ql-picker-item,
+.ql-toolbar .ql-background-picker .ql-picker-item {
+  background: inherit !important;
+}
+
+/* Definir cores específicas para o seletor de cor */
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#000000"] { background-color: #000000 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#e60000"] { background-color: #e60000 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ff9900"] { background-color: #ff9900 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffff00"] { background-color: #ffff00 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#008a00"] { background-color: #008a00 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#0066cc"] { background-color: #0066cc !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#9933ff"] { background-color: #9933ff !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffffff"] { background-color: #ffffff !important; border: 1px solid #ccc !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#facccc"] { background-color: #facccc !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffebcc"] { background-color: #ffebcc !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffffcc"] { background-color: #ffffcc !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#cce8cc"] { background-color: #cce8cc !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#cce0f5"] { background-color: #cce0f5 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ebd6ff"] { background-color: #ebd6ff !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#bbbbbb"] { background-color: #bbbbbb !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#f06666"] { background-color: #f06666 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffc266"] { background-color: #ffc266 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffff66"] { background-color: #ffff66 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#66b966"] { background-color: #66b966 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#66a3e0"] { background-color: #66a3e0 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#c285ff"] { background-color: #c285ff !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#888888"] { background-color: #888888 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#a10000"] { background-color: #a10000 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#b26b00"] { background-color: #b26b00 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#b2b200"] { background-color: #b2b200 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#006100"] { background-color: #006100 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#0047b2"] { background-color: #0047b2 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#6b24b2"] { background-color: #6b24b2 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#444444"] { background-color: #444444 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#5c0000"] { background-color: #5c0000 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#663d00"] { background-color: #663d00 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#666600"] { background-color: #666600 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#003700"] { background-color: #003700 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#002966"] { background-color: #002966 !important; }
+.ql-toolbar .ql-color-picker .ql-picker-item[data-value="#3d1466"] { background-color: #3d1466 !important; }
+
+/* Definir cores específicas para o seletor de cor de fundo */
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#000000"] { background-color: #000000 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#e60000"] { background-color: #e60000 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ff9900"] { background-color: #ff9900 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffff00"] { background-color: #ffff00 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#008a00"] { background-color: #008a00 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#0066cc"] { background-color: #0066cc !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#9933ff"] { background-color: #9933ff !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffffff"] { background-color: #ffffff !important; border: 1px solid #ccc !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#facccc"] { background-color: #facccc !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffebcc"] { background-color: #ffebcc !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffffcc"] { background-color: #ffffcc !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#cce8cc"] { background-color: #cce8cc !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#cce0f5"] { background-color: #cce0f5 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ebd6ff"] { background-color: #ebd6ff !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#bbbbbb"] { background-color: #bbbbbb !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#f06666"] { background-color: #f06666 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffc266"] { background-color: #ffc266 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffff66"] { background-color: #ffff66 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#66b966"] { background-color: #66b966 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#66a3e0"] { background-color: #66a3e0 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#c285ff"] { background-color: #c285ff !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#888888"] { background-color: #888888 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#a10000"] { background-color: #a10000 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#b26b00"] { background-color: #b26b00 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#b2b200"] { background-color: #b2b200 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#006100"] { background-color: #006100 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#0047b2"] { background-color: #0047b2 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#6b24b2"] { background-color: #6b24b2 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#444444"] { background-color: #444444 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#5c0000"] { background-color: #5c0000 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#663d00"] { background-color: #663d00 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#666600"] { background-color: #666600 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#003700"] { background-color: #003700 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#002966"] { background-color: #002966 !important; }
+.ql-toolbar .ql-background-picker .ql-picker-item[data-value="#3d1466"] { background-color: #3d1466 !important; }
+
+/* Garantir que todos os botões tenham fundo transparente */
+.ql-toolbar button,
+.ql-toolbar .ql-picker-label,
+.ql-toolbar .ql-picker {
+  background: transparent !important;
+}
+
+/* Remover bordas brancas */
+.ql-toolbar .ql-stroke {
+  stroke: #475569 !important;
+}
+
+.ql-toolbar .ql-fill {
+  fill: #475569 !important;
+}
+
+/* Estados hover para elementos com stroke/fill */
+.ql-toolbar button:hover .ql-stroke {
+  stroke: #3b82f6 !important;
+}
+
+.ql-toolbar button:hover .ql-fill {
+  fill: #3b82f6 !important;
+}
+
+.ql-toolbar button.ql-active .ql-stroke {
+  stroke: #3b82f6 !important;
+}
+
+.ql-toolbar button.ql-active .ql-fill {
+  fill: #3b82f6 !important;
+}
+
+/* === TOOLBAR PRINCIPAL === */
+.ql-toolbar {
+  border: 1px solid #e2e8f0;
+  border-bottom: none;
+  padding: 10px 12px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* === GRUPOS DE FERRAMENTAS === */
+.ql-toolbar .ql-formats {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px 0 0;
+  position: relative;
+}
+
+/* Separadores entre grupos */
+.ql-toolbar .ql-formats:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);
+  opacity: 0.6;
+}
+
+/* === BOTÕES E ELEMENTOS UNIFORMES === */
+/* Botões padrão (bold, italic, link, etc.) */
+.ql-toolbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  color: #475569;
+}
+
+.ql-toolbar button:hover {
+  background: rgba(59, 130, 246, 0.08);
+  color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.ql-toolbar button.ql-active {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* Seletores (dropdowns) */
+.ql-toolbar .ql-picker {
+  color: #475569;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ql-toolbar .ql-picker-label {
+  border: none !important;
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: transparent !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 13px;
+  font-weight: 500;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.ql-toolbar .ql-picker-label:hover {
+  background: rgba(59, 130, 246, 0.08) !important;
+  color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.ql-toolbar .ql-picker.ql-expanded .ql-picker-label {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* Ajustar especificamente o seletor de tamanho */
+.ql-toolbar .ql-size {
+  width: 70px !important; /* Redução de 30% (era ~100px) */
+  position: relative !important;
+  top: -4px !important; /* Ajustar posição vertical */
+}
+
+.ql-toolbar .ql-size .ql-picker-label {
+  width: 100% !important;
+  min-width: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  height: 32px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-label:hover {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.ql-toolbar .ql-size.ql-expanded .ql-picker-label {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* Ajustar dropdown do seletor de tamanho - PRIORIDADE MÁXIMA */
+.ql-toolbar .ql-size .ql-picker-options {
+  z-index: 1000 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: -10px !important;
+  width: 85px !important;
+  background: white !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  margin-top: 2px !important;
+  opacity: 1 !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-item {
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 32px !important;
+  line-height: 1 !important;
+  font-size: 14px !important;
+  overflow: hidden !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-item::before {
+  width: 100% !important;
+  display: block !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-item:hover {
+  background-color: transparent !important;
+}
+
+/* Customizar texto do seletor de tamanho */
+.ql-toolbar .ql-size .ql-picker-label[data-value="false"]::before {
+  content: "Normal" !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-label[data-value="large"]::before {
+  content: "Grande" !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-item[data-value="false"]::before {
+  content: "Normal" !important;
+}
+
+.ql-toolbar .ql-size .ql-picker-item[data-value="large"]::before {
+  content: "Grande" !important;
+}
+
+/* Ajustar espaçamento entre grupos */
+.ql-toolbar .ql-formats:not(:last-child) {
+  margin-right: 12px;
+}
+/* === BOTÕES CUSTOMIZADOS === */
+/* Botão de upload */
+.ql-toolbar .ql-upload {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #475569;
+}
+
+.ql-toolbar .ql-upload svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ql-toolbar .ql-upload:hover {
+  background: rgba(59, 130, 246, 0.08);
+  color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.ql-toolbar .ql-upload:hover .ql-fill,
+.ql-toolbar .ql-upload:focus .ql-fill,
+.ql-toolbar .ql-upload.ql-active .ql-fill {
+  fill: #3b82f6;
+}
+
+.ql-toolbar .ql-upload:hover .ql-stroke,
+.ql-toolbar .ql-upload:focus .ql-stroke,
+.ql-toolbar .ql-upload.ql-active .ql-stroke {
+  stroke: #3b82f6;
+}
+
+.ql-toolbar .ql-upload::before {
+  display: none;
+}
+
+/* Botão de emoji */
+.ql-toolbar .ql-emoji {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #475569;
+}
+
+.ql-toolbar .ql-emoji svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ql-toolbar .ql-emoji:hover {
+  background: rgba(59, 130, 246, 0.08);
+  color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.ql-toolbar .ql-emoji:hover .ql-fill,
+.ql-toolbar .ql-emoji:focus .ql-fill,
+.ql-toolbar .ql-emoji.ql-active .ql-fill {
+  fill: #3b82f6;
+}
+
+.ql-toolbar .ql-emoji:hover .ql-stroke,
+.ql-toolbar .ql-emoji:focus .ql-stroke,
+.ql-toolbar .ql-emoji.ql-active .ql-stroke {
+  stroke: #3b82f6;
+}
+
+.ql-toolbar .ql-emoji::before {
+  display: none;
+}
+
+.topic-shell .ql-container {
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  min-height: 220px;
+}
+
+
+
+.topic-shell .ql-editor {
+  padding: 16px;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.topic-shell .ql-editor h1,
+.topic-shell .ql-editor h2,
+.topic-shell .ql-editor h3,
+.topic-shell .ql-editor h4,
+.topic-shell .ql-editor h5,
+.topic-shell .ql-editor h6 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.topic-shell .ql-editor ul,
+.topic-shell .ql-editor ol {
+  margin-bottom: 8px;
+  padding-left: 1.2em;
+  list-style-position: outside;
+}
+
+.topic-shell .ql-editor ol {
+  list-style-type: decimal;
+}
+
+.topic-shell .ql-editor ul {
+  list-style-type: disc;
+}
+
+.topic-shell .ql-editor li {
+  display: list-item;
+  margin-bottom: 4px;
+  padding-left: 0;
+  text-indent: -0.2em;
+  margin-left: 0.2em;
+}
+
+.topic-shell .ql-editor ol > li {
+  list-style-type: decimal;
+}
+
+.topic-shell .ql-editor ul > li {
+  list-style-type: disc;
+}
+
+.topic-shell .ql-editor li::marker {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.topic-shell .ql-editor blockquote {
+  border-left: 4px solid #e2e8f0;
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #64748b;
+}
+
+/* Estilos para estados de erro */
+.topic-shell.error .ql-toolbar {
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}
+
+.topic-shell.error .ql-container {
+  border-color: #fca5a5;
+}
+
+/* ===== SISTEMA DE MÍDIA REFATORADO ===== */
+
+/* 1. CONFIGURAÇÃO BÁSICA - Container para centralização de mídia */
+.topic-shell .ql-editor p:has(img),
+.topic-shell .ql-editor p:has(.ql-video-embed),
+.topic-shell .ql-editor p:has(.video-thumbnail-container),
+.topic-shell .ql-editor p:has(.ql-model3d-embed) {
+  display: block !important;
+  text-align: center !important;
+  margin: 12px 0 !important;
+  line-height: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* Mídia individual */
+.topic-shell .ql-editor img,
+.topic-shell .ql-editor .ql-video-embed,
+.topic-shell .ql-editor .video-thumbnail-container,
+.topic-shell .ql-editor .ql-model3d-embed {
+  display: inline-block !important;
+  margin: 4px !important;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+  vertical-align: top;
+  white-space: normal !important;
+}
+
+/* 2. ALTURA FIXA PARA CONSISTÊNCIA VISUAL */
+.topic-shell .ql-editor img {
+  height: 150px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  max-width: 400px !important;
+}
+
+.topic-shell .ql-editor .ql-video-embed,
+.topic-shell .ql-editor .video-thumbnail-container {
+  /* Largura será definida dinamicamente pelo JavaScript baseado na proporção */
+}
+
+/* Estilos específicos para modelos 3D */
+.topic-shell .ql-editor .ql-model3d-embed {
+  width: 150px !important;
+  height: 150px !important;
+  background: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.topic-shell .ql-editor .ql-model3d-embed:hover {
+  transform: scale(1.05);
+  border-color: #3b82f6;
+  /* Sombra removida: box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15); */
+}
+
+.topic-shell .ql-editor .ql-model3d-embed .model3d-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.topic-shell .ql-editor .ql-model3d-embed .model3d-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  pointer-events: none;
+}
+
+.topic-shell .ql-editor .ql-model3d-embed .model3d-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topic-shell .ql-editor .ql-video-embed iframe,
+.topic-shell .ql-editor .video-thumbnail-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* 3. QUEBRA DE LINHA APÓS MÍDIA APENAS QUANDO SEGUIDA POR TEXTO */
+.topic-shell .ql-editor p:has(img) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)),
+.topic-shell .ql-editor p:has(.ql-video-embed) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)),
+.topic-shell .ql-editor p:has(.video-thumbnail-container) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)),
+.topic-shell .ql-editor p:has(.ql-model3d-embed) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)) {
+  margin-top: 12px !important;
+}
+
+/* 4. GARANTIR QUE TEXTO SEJA SEMPRE BLOCO (exceto containers de mídia) */
+.topic-shell .ql-editor p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)) {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 5. EFEITOS VISUAIS */
+.topic-shell .ql-editor img:hover,
+.topic-shell .ql-editor .video-thumbnail-container:hover,
+.topic-shell .ql-editor .ql-model3d-embed:hover {
+  transform: scale(1.05);
+}
+
+.topic-shell .ql-editor .video-thumbnail-container,
+.topic-shell .ql-editor .ql-model3d-embed {
+  cursor: pointer;
+}
+
+/* 6. LIMPEZA DE LAYOUT */
+.topic-shell .ql-editor::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 7. SISTEMA DE INTERAÇÃO COM MÍDIA CENTRALIZADA */
+.topic-shell .ql-editor p:has(img),
+.topic-shell .ql-editor p:has(.ql-video-embed),
+.topic-shell .ql-editor p:has(.video-thumbnail-container),
+.topic-shell .ql-editor p:has(.ql-model3d-embed) {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Permitir interação apenas com a mídia */
+.topic-shell .ql-editor p img,
+.topic-shell .ql-editor p .ql-video-embed,
+.topic-shell .ql-editor p .video-thumbnail-container,
+.topic-shell .ql-editor p .ql-model3d-embed {
+  pointer-events: auto;
+  user-select: auto;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+}
+
+/* Garantir que parágrafos de texto sejam editáveis */
+.topic-shell .ql-editor p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)) {
+  pointer-events: auto;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+/* 8. RESPONSIVIDADE PARA MÚLTIPLAS MÍDIAS */
+@media (max-width: 768px) {
+  .topic-shell .ql-editor p:has(img),
+  .topic-shell .ql-editor p:has(.ql-video-embed),
+  .topic-shell .ql-editor p:has(.video-thumbnail-container),
+  .topic-shell .ql-editor p:has(.ql-model3d-embed) {
+    flex-direction: column !important;
+  }
+  
+  .topic-shell .ql-editor img,
+  .topic-shell .ql-editor .ql-video-embed,
+  .topic-shell .ql-editor .video-thumbnail-container,
+  .topic-shell .ql-editor .ql-model3d-embed {
+    max-width: 100% !important;
+  }
+}
+
+/* Estilos específicos para players de áudio no editor de tópicos */
+.topic-shell .ql-editor .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin: 0 4px !important;
+  padding: 0 !important;
+  width: 350px !important;
+  height: 25px !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Garantir comportamento inline para múltiplos players */
+.topic-shell .ql-editor p .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* Forçar comportamento inline para containers de áudio */
+.topic-shell .prose .ql-audio-embed,
+.topic-shell .text-gray-700 .ql-audio-embed,
+.topic-shell .leading-relaxed .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA EDITOR DE COMENTÁRIOS ===== */
+
+/* Largura reduzida para o editor de comentários - similar ao editor de tópicos */
+.comment-rich-editor {
+  max-width: 650px !important;
+}
+
+/* ===== ESTILOS PARA COMENTÁRIOS POSTADOS (COMMENT-SHELL) ===== */
+
+/* Replicar exatamente o comportamento visual do topic-shell */
+.comment-shell {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Classe específica para visualização de comentários postados */
+.comment-shell.comment-view {
+  margin: 0 auto;
+}
+
+/* Container do Quill para comentários postados */
+.comment-shell .ql-container {
+  border: none;
+  min-height: auto;
+}
+
+/* Editor do Quill para comentários postados */
+.comment-shell .ql-editor {
+  min-height: auto;
+  padding: 16px;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* ===== SISTEMA DE MÍDIA PARA COMENTÁRIOS (REPLICAR TOPIC-SHELL) ===== */
+
+/* 1. CONFIGURAÇÃO BÁSICA - Container para centralização de mídia */
+.comment-shell .ql-editor p:has(img),
+.comment-shell .ql-editor p:has(.ql-video-embed),
+.comment-shell .ql-editor p:has(.video-thumbnail-container),
+.comment-shell .ql-editor p:has(.ql-model3d-embed) {
+  display: block !important;
+  text-align: center !important;
+  margin: 12px 0 !important;
+  line-height: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* Mídia individual */
+.comment-shell .ql-editor img,
+.comment-shell .ql-editor .ql-video-embed,
+.comment-shell .ql-editor .video-thumbnail-container,
+.comment-shell .ql-editor .ql-model3d-embed {
+  display: inline-block !important;
+  margin: 4px !important;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+  vertical-align: top;
+  white-space: normal !important;
+}
+
+/* 2. ALTURA FIXA PARA CONSISTÊNCIA VISUAL */
+.comment-shell .ql-editor img {
+  height: 150px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  max-width: 400px !important;
+}
+
+.comment-shell .ql-editor .ql-video-embed,
+.comment-shell .ql-editor .video-thumbnail-container {
+  /* Largura será definida dinamicamente pelo JavaScript baseado na proporção */
+}
+
+/* Estilos específicos para modelos 3D */
+.comment-shell .ql-editor .ql-model3d-embed {
+  width: 150px !important;
+  height: 150px !important;
+  background: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.comment-shell .ql-editor .ql-model3d-embed:hover {
+  transform: scale(1.05);
+  border-color: #3b82f6;
+  /* Sombra removida: box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15); */
+}
+
+.comment-shell .ql-editor .ql-model3d-embed .model3d-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.comment-shell .ql-editor .ql-model3d-embed .model3d-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  pointer-events: none;
+}
+
+.comment-shell .ql-editor .ql-model3d-embed .model3d-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-shell .ql-editor .ql-video-embed iframe,
+.comment-shell .ql-editor .video-thumbnail-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* 3. QUEBRA DE LINHA APÓS MÍDIA APENAS QUANDO SEGUIDA POR TEXTO */
+.comment-shell .ql-editor p:has(img) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)),
+.comment-shell .ql-editor p:has(.ql-video-embed) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)),
+.comment-shell .ql-editor p:has(.video-thumbnail-container) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)),
+.comment-shell .ql-editor p:has(.ql-model3d-embed) + p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)) {
+  margin-top: 12px !important;
+}
+
+/* 4. GARANTIR QUE TEXTO SEJA SEMPRE BLOCO (exceto containers de mídia) */
+.comment-shell .ql-editor p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)) {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 5. EFEITOS VISUAIS */
+.comment-shell .ql-editor img:hover,
+.comment-shell .ql-editor .video-thumbnail-container:hover,
+.comment-shell .ql-editor .ql-model3d-embed:hover {
+  transform: scale(1.05);
+}
+
+.comment-shell .ql-editor .video-thumbnail-container,
+.comment-shell .ql-editor .ql-model3d-embed {
+  cursor: pointer;
+}
+
+/* 6. LIMPEZA DE LAYOUT */
+.comment-shell .ql-editor::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 7. SISTEMA DE INTERAÇÃO COM MÍDIA CENTRALIZADA */
+.comment-shell .ql-editor p:has(img),
+.comment-shell .ql-editor p:has(.ql-video-embed),
+.comment-shell .ql-editor p:has(.video-thumbnail-container),
+.comment-shell .ql-editor p:has(.ql-model3d-embed) {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Permitir interação apenas com a mídia */
+.comment-shell .ql-editor p img,
+.comment-shell .ql-editor p .ql-video-embed,
+.comment-shell .ql-editor p .video-thumbnail-container,
+.comment-shell .ql-editor p .ql-model3d-embed {
+  pointer-events: auto;
+  user-select: auto;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+}
+
+/* Garantir que parágrafos de texto sejam editáveis */
+.comment-shell .ql-editor p:not(:has(img)):not(:has(.ql-video-embed)):not(:has(.video-thumbnail-container)):not(:has(.ql-model3d-embed)) {
+  pointer-events: auto;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+/* 8. RESPONSIVIDADE PARA MÚLTIPLAS MÍDIAS */
+@media (max-width: 768px) {
+  .comment-shell .ql-editor p:has(img),
+  .comment-shell .ql-editor p:has(.ql-video-embed),
+  .comment-shell .ql-editor p:has(.video-thumbnail-container),
+  .comment-shell .ql-editor p:has(.ql-model3d-embed) {
+    flex-direction: column !important;
+  }
+  
+  .comment-shell .ql-editor img,
+  .comment-shell .ql-editor .ql-video-embed,
+  .comment-shell .ql-editor .video-thumbnail-container,
+  .comment-shell .ql-editor .ql-model3d-embed {
+    max-width: 100% !important;
+  }
+}
+
+/* Estilos específicos para players de áudio no comentário */
+.comment-shell .ql-editor .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin: 0 4px !important;
+  padding: 0 !important;
+  width: 350px !important;
+  height: 25px !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Garantir comportamento inline para múltiplos players */
+.comment-shell .ql-editor p .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* Forçar comportamento inline para containers de áudio */
+.comment-shell .prose .ql-audio-embed,
+.comment-shell .text-gray-700 .ql-audio-embed,
+.comment-shell .leading-relaxed .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* === ESTILOS PARA EDITOR DE COMENTÁRIOS === */
+.comment-rich-editor .ql-toolbar {
+  border: 1px solid #e2e8f0;
+  border-bottom: none;
+  padding: 10px 12px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Aplicar os mesmos estilos de grupos para comentários */
+.comment-rich-editor .ql-toolbar .ql-formats {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px 0 0;
+  position: relative;
+}
+
+.comment-rich-editor .ql-toolbar .ql-formats:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);
+  opacity: 0.6;
+}
+
+/* Aplicar os mesmos estilos de sobrescrita para comentários */
+.comment-rich-editor .ql-toolbar .ql-picker-item:not(.ql-color-picker):not(.ql-background-picker),
+.comment-rich-editor .ql-toolbar .ql-stroke,
+.comment-rich-editor .ql-toolbar .ql-fill {
+  background: transparent !important;
+}
+
+/* Manter janela dropdown dos seletores de cor e tamanho visível nos comentários */
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-options,
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-options,
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-options {
+  background: white !important;
+  border: 1px solid #ccc !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+}
+
+/* Outros picker-options podem ser transparentes nos comentários */
+.comment-rich-editor .ql-toolbar .ql-picker-options:not(.ql-color-picker .ql-picker-options):not(.ql-background-picker .ql-picker-options):not(.ql-size .ql-picker-options) {
+  background: transparent !important;
+}
+
+/* Cores específicas para seletores de cor nos comentários */
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#000000"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#000000"] {
+  background-color: #000000 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#e60000"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#e60000"] {
+  background-color: #e60000 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ff9900"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ff9900"] {
+  background-color: #ff9900 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffff00"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffff00"] {
+  background-color: #ffff00 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#008a00"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#008a00"] {
+  background-color: #008a00 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#0066cc"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#0066cc"] {
+  background-color: #0066cc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#9933ff"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#9933ff"] {
+  background-color: #9933ff !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffffff"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffffff"] {
+  background-color: #ffffff !important;
+  border: 1px solid #ccc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#facccc"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#facccc"] {
+  background-color: #facccc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffebcc"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffebcc"] {
+  background-color: #ffebcc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffffcc"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffffcc"] {
+  background-color: #ffffcc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#cce8cc"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#cce8cc"] {
+  background-color: #cce8cc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#cce0f5"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#cce0f5"] {
+  background-color: #cce0f5 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ebd6ff"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ebd6ff"] {
+  background-color: #ebd6ff !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#bbbbbb"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#bbbbbb"] {
+  background-color: #bbbbbb !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#f06666"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#f06666"] {
+  background-color: #f06666 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#fe6600"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#fe6600"] {
+  background-color: #fe6600 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#ffff00"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#ffff00"] {
+  background-color: #ffff00 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#00d084"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#00d084"] {
+  background-color: #00d084 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#0099ff"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#0099ff"] {
+  background-color: #0099ff !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#9900ff"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#9900ff"] {
+  background-color: #9900ff !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#999999"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#999999"] {
+  background-color: #999999 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#cc0000"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#cc0000"] {
+  background-color: #cc0000 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#e69138"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#e69138"] {
+  background-color: #e69138 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#f1c232"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#f1c232"] {
+  background-color: #f1c232 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#6aa84f"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#6aa84f"] {
+  background-color: #6aa84f !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#6d9eeb"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#6d9eeb"] {
+  background-color: #6d9eeb !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#b45f06"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#b45f06"] {
+  background-color: #b45f06 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#666666"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#666666"] {
+  background-color: #666666 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#990000"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#990000"] {
+  background-color: #990000 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#b45f06"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#b45f06"] {
+  background-color: #b45f06 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#bf9000"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#bf9000"] {
+  background-color: #bf9000 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#38761d"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#38761d"] {
+  background-color: #38761d !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#1155cc"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#1155cc"] {
+  background-color: #1155cc !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#674ea7"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#674ea7"] {
+  background-color: #674ea7 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-color-picker .ql-picker-item[data-value="#333333"],
+.comment-rich-editor .ql-toolbar .ql-background-picker .ql-picker-item[data-value="#333333"] {
+  background-color: #333333 !important;
+}
+
+.comment-rich-editor .ql-toolbar button,
+.comment-rich-editor .ql-toolbar .ql-picker-label,
+.comment-rich-editor .ql-toolbar .ql-picker {
+  background: transparent !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-stroke {
+  stroke: #475569 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-fill {
+  fill: #475569 !important;
+}
+
+.comment-rich-editor .ql-toolbar button:hover .ql-stroke {
+  stroke: #3b82f6 !important;
+}
+
+.comment-rich-editor .ql-toolbar button:hover .ql-fill {
+  fill: #3b82f6 !important;
+}
+
+.comment-rich-editor .ql-toolbar button.ql-active .ql-stroke {
+  stroke: #3b82f6 !important;
+}
+
+.comment-rich-editor .ql-toolbar button.ql-active .ql-fill {
+  fill: #3b82f6 !important;
+}
+
+/* Aplicar os mesmos estilos de seletores para comentários */
+.comment-rich-editor .ql-toolbar .ql-picker-label {
+  border: none !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-picker-label:hover {
+  background: rgba(59, 130, 246, 0.08) !important;
+  color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.comment-rich-editor .ql-toolbar .ql-picker.ql-expanded .ql-picker-label {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* Ajustar seletor de tamanho nos comentários também */
+.comment-rich-editor .ql-toolbar .ql-size {
+  width: 70px !important;
+  position: relative !important;
+  top: -4px !important; /* Ajustar posição vertical */
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-label {
+  width: 100% !important;
+  min-width: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  height: 32px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-label:hover {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size.ql-expanded .ql-picker-label {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* Ajustar dropdown do seletor de tamanho nos comentários - PRIORIDADE MÁXIMA */
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-options {
+  z-index: 1000 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: -10px !important;
+  width: 85px !important;
+  background: white !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  margin-top: 2px !important;
+  opacity: 1 !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-item {
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 32px !important;
+  line-height: 1 !important;
+  font-size: 14px !important;
+  overflow: hidden !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-item::before {
+  width: 100% !important;
+  display: block !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-item:hover {
+  background-color: transparent !important;
+}
+
+/* Customizar texto do seletor de tamanho nos comentários */
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-label[data-value="false"]::before {
+  content: "Normal" !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-label[data-value="large"]::before {
+  content: "Grande" !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-item[data-value="false"]::before {
+  content: "Normal" !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-size .ql-picker-item[data-value="large"]::before {
+  content: "Grande" !important;
+}
+
+.comment-rich-editor .ql-toolbar .ql-formats:not(:last-child) {
+  margin-right: 12px;
+}
+
+.comment-rich-editor .ql-container {
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  min-height: 120px;
+}
+
+.comment-rich-editor .ql-editor {
+  padding: 16px;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* ===== SISTEMA DE MÍDIA PARA EDITOR DE COMENTÁRIOS (REPLICAR TOPIC-SHELL) ===== */
+
+/* 1. CONFIGURAÇÃO BÁSICA - Container para centralização de mídia */
+.comment-rich-editor .ql-editor p:has(img),
+.comment-rich-editor .ql-editor p:has(.ql-video-embed),
+.comment-rich-editor .ql-editor p:has(.video-thumbnail-container),
+.comment-rich-editor .ql-editor p:has(.ql-model3d-embed) {
+  display: block !important;
+  text-align: center !important;
+  margin: 12px 0 !important;
+  line-height: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* Mídia individual */
+.comment-rich-editor .ql-editor img,
+.comment-rich-editor .ql-editor .ql-video-embed,
+.comment-rich-editor .ql-editor .video-thumbnail-container,
+.comment-rich-editor .ql-editor .ql-model3d-embed {
+  display: inline-block !important;
+  margin: 4px !important;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* 2. MÍDIA INDIVIDUAL - Imagens */
+.comment-rich-editor .ql-editor img {
+  height: 150px !important;
+  width: auto !important;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 3. MÍDIA INDIVIDUAL - Video embeds */
+.comment-rich-editor .ql-editor .ql-video-embed {
+  height: 150px !important;
+  width: auto !important;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 4. MÍDIA INDIVIDUAL - Modelos 3D */
+.comment-rich-editor .ql-editor .ql-model3d-embed {
+  height: 150px !important;
+  width: auto !important;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* 5. ALTURA FIXA PARA CONSISTÊNCIA VISUAL */
+.comment-rich-editor .ql-editor img,
+.comment-rich-editor .ql-editor .ql-video-embed,
+.comment-rich-editor .ql-editor .video-thumbnail-container,
+.comment-rich-editor .ql-editor .ql-model3d-embed {
+  height: 150px !important;
+}
+
+/* 6. QUEBRA DE LINHA APÓS MÍDIA */
+.comment-rich-editor .ql-editor img::after,
+.comment-rich-editor .ql-editor .ql-video-embed::after,
+.comment-rich-editor .ql-editor .video-thumbnail-container::after,
+.comment-rich-editor .ql-editor .ql-model3d-embed::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 7. GARANTIR QUE TEXTO SEJA SEMPRE BLOCO */
+.comment-rich-editor .ql-editor p {
+  display: block !important;
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+/* 8. EFEITOS VISUAIS */
+.comment-rich-editor .ql-editor img:hover,
+.comment-rich-editor .ql-editor .ql-video-embed:hover,
+.comment-rich-editor .ql-editor .video-thumbnail-container:hover,
+.comment-rich-editor .ql-editor .ql-model3d-embed:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 9. LIMPEZA DE LAYOUT */
+.comment-rich-editor .ql-editor br {
+  display: none;
+}
+
+/* 10. SISTEMA DE INTERAÇÃO - Mídia centralizada */
+.comment-rich-editor .ql-editor p:has(img),
+.comment-rich-editor .ql-editor p:has(.ql-video-embed),
+.comment-rich-editor .ql-editor p:has(.video-thumbnail-container),
+.comment-rich-editor .ql-editor p:has(.ql-model3d-embed) {
+  text-align: center;
+  margin: 16px 0;
+}
+
+/* 11. RESPONSIVIDADE - Múltiplas mídias */
+.comment-rich-editor .ql-editor p:has(img + img),
+.comment-rich-editor .ql-editor p:has(.ql-video-embed + .ql-video-embed),
+.comment-rich-editor .ql-editor p:has(.ql-model3d-embed + .ql-model3d-embed) {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* 12. PLAYERS DE ÁUDIO INLINE */
+.comment-rich-editor .ql-editor .ql-audio-embed {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
